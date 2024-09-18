@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
     public float bulletVelocity = 30;
-    public float bulletPrefabLifeTime = 3f;
+    public float bulletPrefabLifeTime = 1f;
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +15,6 @@ public class Weapon : MonoBehaviour
         {
             FireWeapon();
         }
-        
     }
     private void FireWeapon()
     {
@@ -31,4 +30,5 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Destroy(bullet);
     }
+    
 }

@@ -4,12 +4,12 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
-
     public Transform player;
-
     public LayerMask whatIsGround, whatIsPlayer;
-
     public float health;
+    public int damage = 10; // Daño que hace el enemigo
+    private float attackCooldown = 1f; // Tiempo entre ataques
+    private float nextAttackTime = 0f;
 
     //Patroling
     public Vector3 walkPoint;
@@ -99,6 +99,17 @@ public class Enemy : MonoBehaviour
         {
             TakeDamage(1); // Supongamos que cada bala hace 1 de daño
             Destroy(other.gameObject); // Destruye la bala
+        }
+        if (other.CompareTag("Player") && Time.time >= nextAttackTime)
+        {
+            // Supongamos que el jugador tiene un script que maneja la vida
+            PlayerStats PlayerStats = other.GetComponent<PlayerStats>();
+            if (PlayerStats != null)
+            {
+                PlayerStats.TakeDamage(damage); // Aplica el daño
+            }
+
+            nextAttackTime = Time.time + attackCooldown; // Establece el tiempo para el próximo ataque
         }
     }
 

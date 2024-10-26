@@ -4,7 +4,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxHealth;
 
     public HealthBar healthBar;
-
+    public int KeyAmount;
     private float currentHealth;
     private void Start()
     {
@@ -42,5 +42,13 @@ public class PlayerStats : MonoBehaviour
         //Activate death screen
 
         //...
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Key"))
+        {
+            KeyAmount += 1;
+            Destroy(other.gameObject);
+        }
     }
 }

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
@@ -37,11 +39,8 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("You died!");
 
-        //Play death animation
-
-        //Activate death screen
-
-        //...
+        // Reiniciar la escena
+        SceneManager.LoadScene("SampleScene");
     }
     private void OnTriggerEnter(Collider other)
     {

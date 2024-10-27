@@ -13,25 +13,13 @@ public class Collectable : MonoBehaviour
         objectRenderer = GetComponent<Renderer>();
         objectCollider = GetComponent<Collider>();
     }
-    void SetInvisibleAndDisableCollision()
-    {
-        if (objectRenderer != null)
-        {
-            objectRenderer.enabled = false; // Make the object invisible
-        }
 
-        if (objectCollider != null)
-        {
-            objectCollider.enabled = false; // Disable collisions
-        }
-    }
     private void OnTriggerEnter(Collider other)
-   {
+    {
 	   if (other.gameObject.CompareTag("Player"))
 	   {
-		   SetInvisibleAndDisableCollision();
-           score = score + 1;
-           Debug.Log(score);  
+		   other.GetComponent<WinText>().score++;
+           Destroy(gameObject);
 	   }
-   }
+    }
 }

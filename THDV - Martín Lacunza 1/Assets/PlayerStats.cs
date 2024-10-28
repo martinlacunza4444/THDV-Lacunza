@@ -3,37 +3,36 @@ using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float maxHealth;
-
-    public HealthBar healthBar;
+    public PlayerDataSO playerData;
     public int KeyAmount;
-    private float currentHealth;
+    public HealthBar healthBar;
+  
     private void Start()
     {
-        currentHealth = maxHealth;
+        playerData.currentHealth = playerData.maxHealth;
 
-        healthBar.SetSliderMax(maxHealth);
+        healthBar.SetSliderMax(playerData.maxHealth);
     }
     private void Update()
     {
-        if (currentHealth > maxHealth)
+        if (playerData.currentHealth > playerData.maxHealth)
         {
-            currentHealth = maxHealth;
+            playerData.currentHealth = playerData.maxHealth;
         }
-        if (currentHealth <= 0)
+        if (playerData.currentHealth <= 0)
         {
             Die();
         }
     }
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
-        healthBar.SetSlider(currentHealth);
+        playerData.currentHealth -= amount;
+        healthBar.SetSlider(playerData.currentHealth);
     }
     public void HealPlayer(float amount)
     {
-        currentHealth += amount;
-        healthBar.SetSlider(currentHealth);
+        playerData.currentHealth += amount;
+        healthBar.SetSlider(playerData.currentHealth);
     }
     private void Die()
     {

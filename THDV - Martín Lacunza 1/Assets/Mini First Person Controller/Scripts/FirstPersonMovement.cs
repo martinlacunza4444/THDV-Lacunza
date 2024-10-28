@@ -3,14 +3,7 @@ using UnityEngine;
 
 public class FirstPersonMovement : MonoBehaviour
 {
-    public float speed = 5;
-
-    [Header("Running")]
-    public bool canRun = true;
-    public bool IsRunning { get; private set; }
-    public float runSpeed = 9;
-    public KeyCode runningKey = KeyCode.LeftShift;
-    public int KeyAmount;
+    public PlayerDataSO playerData;
 
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
@@ -27,10 +20,10 @@ public class FirstPersonMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Update IsRunning from input.
-        IsRunning = canRun && Input.GetKey(runningKey);
+        playerData.IsRunning = playerData.canRun && Input.GetKey(playerData.runningKey);
 
         // Get targetMovingSpeed.
-        float targetMovingSpeed = IsRunning ? runSpeed : speed;
+        float targetMovingSpeed = playerData.IsRunning ? playerData.runSpeed : playerData.speed;
         if (speedOverrides.Count > 0)
         {
             targetMovingSpeed = speedOverrides[speedOverrides.Count - 1]();

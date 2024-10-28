@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GunData
   m_EditorClassIdentifier: 
   maxAmmo: 30
-  currentAmmo: 12
+  currentAmmo: 30
   reserveAmmo: 60
   reloadTime: 2
   damage: 10

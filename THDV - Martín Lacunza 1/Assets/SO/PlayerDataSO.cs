@@ -12,5 +12,4 @@ public class PlayerDataSO: ScriptableObject
     public KeyCode runningKey = KeyCode.LeftShift;
     public float maxHealth;
     public float currentHealth;
-
 }

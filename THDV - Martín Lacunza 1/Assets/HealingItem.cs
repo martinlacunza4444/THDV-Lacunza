@@ -1,12 +1,12 @@
 using UnityEngine;
 public class HealingItem : MonoBehaviour
 {
-    public float healAmount = 5f;
+    public HealDataSO healData;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStats>().HealPlayer(healAmount);
+            other.GetComponent<PlayerStats>().HealPlayer(healData.healAmount);
             Destroy(gameObject);
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage;
+    public BulletDataSO bulletData;
 
     private void Start()
     {
@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerStats>().TakeDamage(damage);
+            other.GetComponent<PlayerStats>().TakeDamage(bulletData.damage);
             Destroy(gameObject);
         }
         Destroy(gameObject);

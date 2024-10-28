@@ -6,10 +6,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
-    public float health;
-    public int damage = 10; // Daño que hace el enemigo
-    private float attackCooldown = 1f; // Tiempo entre ataques
-    private float nextAttackTime = 0f;
+    public EnemyDataSO enemyData;
 
     //Patroling
     public Vector3 walkPoint;
@@ -80,8 +77,8 @@ public class Enemy : MonoBehaviour
     // Método para manejar el daño recibido
     public void TakeDamage(int damage)
     {
-        health -= damage; // Resta la vida
-        if (health <= 0)
+        enemyData.health -= damage; // Resta la vida
+        if (enemyData.health <= 0)
         {
             Die(); // Si la vida es 0 o menos, destruye el enemigo
         }
@@ -100,16 +97,16 @@ public class Enemy : MonoBehaviour
             TakeDamage(1); // Supongamos que cada bala hace 1 de daño
             Destroy(other.gameObject); // Destruye la bala
         }
-        if (other.CompareTag("Player") && Time.time >= nextAttackTime)
+        if (other.CompareTag("Player") && Time.time >= enemyData.nextAttackTime)
         {
             // Supongamos que el jugador tiene un script que maneja la vida
             PlayerStats PlayerStats = other.GetComponent<PlayerStats>();
             if (PlayerStats != null)
             {
-                PlayerStats.TakeDamage(damage); // Aplica el daño
+                PlayerStats.TakeDamage(enemyData.damage); // Aplica el daño
             }
 
-            nextAttackTime = Time.time + attackCooldown; // Establece el tiempo para el próximo ataque
+            enemyData.nextAttackTime = Time.time + enemyData.attackCooldown; // Establece el tiempo para el próximo ataque
         }
     }
 

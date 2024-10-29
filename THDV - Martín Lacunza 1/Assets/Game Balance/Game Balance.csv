@@ -1,0 +1,5 @@
+Name;Damage;Health;Speed
+Zombie;110;20;3
+Dog;40;49;4
+Burned;70;15;5
+Boss;1800;60;2

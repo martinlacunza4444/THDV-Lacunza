@@ -8,7 +8,7 @@ public class ObjectToggle : MonoBehaviour
     private void Update()
     {
         // Comprueba si se mantiene presionado el botón "Q"
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetMouseButton(1))
         {
             ToggleObjects(false); // Ocultar objetos
             SetRedOverlay(true); // Mostrar overlay rojo

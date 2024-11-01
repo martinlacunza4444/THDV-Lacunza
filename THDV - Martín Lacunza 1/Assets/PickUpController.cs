@@ -18,6 +18,7 @@ public class PickupGun : MonoBehaviour
     private void Start()
     {
         // Inicializar el arma como no equipada
+        ResetPickupState();
         if (!equipped)
         {
             gunScript.enabled = false;
@@ -35,7 +36,7 @@ public class PickupGun : MonoBehaviour
             PickUp();
         }
 
-        if (equipped && Input.GetKeyDown(KeyCode.Q)) 
+        if (equipped && Input.GetKeyDown(KeyCode.Q) && slotFull) 
         {
             Drop();
         }
@@ -79,5 +80,13 @@ public class PickupGun : MonoBehaviour
 
         gunScript.enabled = false;
         gunScript.Unequip(); // Desactiva la UI del arma al soltarla
+    }
+
+    private void ResetPickupState()
+    {
+        equipped = false;
+        slotFull = false;
+        rb.isKinematic = false;
+        coll.isTrigger = false;
     }
 }

@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     public EnemyDataSO enemyData;
     public float currentHealth;
-    
+    public float nextAttackTime = 0f;
     // Velocidad del NavMeshAgent, modificable en el inspector
     [Header("NavMesh Agent Settings")]
 
@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour
             TakeDamage(1); // Supongamos que cada bala hace 1 de daño
             Destroy(other.gameObject); // Destruye la bala
         }
-        if (other.CompareTag("Player") && Time.time >= enemyData.nextAttackTime)
+        if (other.CompareTag("Player") && Time.time >= nextAttackTime)
         {
             // Supongamos que el jugador tiene un script que maneja la vida
             PlayerStats PlayerStats = other.GetComponent<PlayerStats>();
@@ -115,7 +115,7 @@ public class Enemy : MonoBehaviour
                 PlayerStats.TakeDamage(enemyData.damage); // Aplica el daño
             }
 
-            enemyData.nextAttackTime = Time.time + enemyData.attackCooldown; // Establece el tiempo para el próximo ataque
+            nextAttackTime = Time.time + enemyData.attackCooldown; // Establece el tiempo para el próximo ataque
         }
     }
 

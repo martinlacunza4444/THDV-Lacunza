@@ -16,7 +16,6 @@ public class Gun : MonoBehaviour
     {
         gunData.currentAmmo = gunData.maxAmmo;
         UpdateAmmoUI(); // Actualiza la UI al inicio
-        ammoDisplay.gameObject.SetActive(false); // Desactiva la UI al inicio
     }
 
     void OnEnable()
@@ -47,7 +46,7 @@ public class Gun : MonoBehaviour
         }
 
         // Disparar si hay munición
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+        if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / gunData.fireRate;
             Shoot();

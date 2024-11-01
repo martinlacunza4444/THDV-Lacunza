@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c4afcaf64f9374399206109c7ce3b9, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  health: 100
+  StartHealth: 100
   damage: 20
   attackCooldown: 1
   nextAttackTime: 9.84
+  speed: 20

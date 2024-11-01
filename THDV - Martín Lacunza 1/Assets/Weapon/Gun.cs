@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections; 
 using UnityEngine;
 using TMPro;
 
@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour
 {
     public TextMeshProUGUI ammoDisplay; // Referencia al texto de munición
     private bool isReloading = false;
-    public  GunDataSO gunData;
+    public GunDataSO gunData;
     public Camera fpscamera;
     public Animator animator;
 
@@ -16,6 +16,7 @@ public class Gun : MonoBehaviour
     {
         gunData.currentAmmo = gunData.maxAmmo;
         UpdateAmmoUI(); // Actualiza la UI al inicio
+        ammoDisplay.gameObject.SetActive(false); // Desactiva la UI al inicio
     }
 
     void OnEnable()
@@ -105,10 +106,38 @@ public class Gun : MonoBehaviour
         ammoDisplay.text = $"{gunData.currentAmmo} / {gunData.reserveAmmo}"; // Actualiza el texto de la UI
     }
 
+    public void Equip() // Método para equipar el arma
+    {
+        ammoDisplay.gameObject.SetActive(true); // Activa la UI del arma
+        UpdateAmmoUI(); // Actualiza la UI al equipar
+        Debug.Log("Arma equipada."); // Mensaje de depuración
+    }
+
+    public void Unequip() // Método para desequipar el arma
+    {
+        ammoDisplay.gameObject.SetActive(false); // Desactiva la UI al desequipar
+        Debug.Log("Arma desequipada."); // Mensaje de depuración
+    }
+
     public void AddAmmo(int amount)
     {
-        gunData.reserveAmmo += amount;
-        UpdateAmmoUI(); // Actualiza la UI para mostrar la nueva munición
-        Debug.Log("Munición de reserva aumentada. Reserva actual: " + gunData.reserveAmmo);
+        if (gameObject.activeInHierarchy) // Asegúrate de que el arma esté activa
+            {
+            // Solo actualizar la reserva si el arma está equipada
+            gunData.reserveAmmo += amount;
+
+            // Actualiza currentAmmo si el arma está equipada
+            if (gunData.currentAmmo < gunData.maxAmmo)
+            {
+                int ammoNeeded = gunData.maxAmmo - gunData.currentAmmo;
+                int ammoToAdd = Mathf.Min(ammoNeeded, amount);
+
+                gunData.currentAmmo += ammoToAdd;
+                gunData.reserveAmmo -= ammoToAdd; // Restar la munición añadida de la reserva
+            }
+
+            UpdateAmmoUI(); // Actualiza la UI para mostrar la nueva munición
+            Debug.Log("Munición de reserva aumentada. Reserva actual: " + gunData.reserveAmmo);
+         }
     }
 }

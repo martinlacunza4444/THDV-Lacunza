@@ -7,16 +7,20 @@ public class Enemy : MonoBehaviour
     public Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
     public EnemyDataSO enemyData;
+    public float currentHealth;
+    
+    // Velocidad del NavMeshAgent, modificable en el inspector
+    [Header("NavMesh Agent Settings")]
 
-    //Patroling
+    // Patroling
     public Vector3 walkPoint;
     bool walkPointSet;
     public float walkPointRange;
 
-    //Attacking
+    // Attacking
     bool alreadyAttacked;
 
-    //States
+    // States
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
@@ -24,11 +28,16 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.Find("First Person Controller").transform;
         agent = GetComponent<NavMeshAgent>();
+        currentHealth = enemyData.StartHealth;
+
+        // Establecer la velocidad del agente
+        agent.speed = enemyData.speed;
+        enemyData.speed = agent.speed;
     }
 
     private void Update()
     {
-        //Check for sight and attack range
+        // Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -45,13 +54,14 @@ public class Enemy : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
-        //Walkpoint reached
+        // Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
+
     private void SearchWalkPoint()
     {
-        //Calculate random point in range
+        // Calculate random point in range
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
 
@@ -68,17 +78,16 @@ public class Enemy : MonoBehaviour
 
     private void AttackPlayer()
     {
-        //Make sure enemy doesn't move
+        // Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-
         transform.LookAt(player);
     }
 
     // Método para manejar el daño recibido
     public void TakeDamage(int damage)
     {
-        enemyData.health -= damage; // Resta la vida
-        if (enemyData.health <= 0)
+        currentHealth -= damage; // Resta la vida
+        if (currentHealth <= 0)
         {
             Die(); // Si la vida es 0 o menos, destruye el enemigo
         }

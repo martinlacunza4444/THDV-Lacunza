@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2185beb17672640a83a52fc4d735ba, type: 3}
   m_Name: HealData
   m_EditorClassIdentifier: 
+  healAmount: 40

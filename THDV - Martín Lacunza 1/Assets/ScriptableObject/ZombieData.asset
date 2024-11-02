@@ -16,3 +16,4 @@ MonoBehaviour:
   damage: 30
   attackCooldown: 1
   speed: 10
+  acceleration: 3

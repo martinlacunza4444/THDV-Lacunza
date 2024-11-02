@@ -4,7 +4,7 @@ public class DoorInteraction : MonoBehaviour
 {
     public Animator SecretDoor; // Asigna el Animator de la puerta en el Inspector
     public float interactionDistance = 3f; // Distancia para interactuar
-
+    public GameObject SecretButton;
     private GameObject player;
 
     private void Start()

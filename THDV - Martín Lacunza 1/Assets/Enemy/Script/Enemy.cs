@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour
 
         // Establecer la velocidad del agente
         agent.speed = enemyData.speed;
+        agent.acceleration = enemyData.acceleration;
+        enemyData.acceleration = agent.acceleration;
         enemyData.speed = agent.speed;
     }
 

@@ -7,4 +7,5 @@ public class EnemyDataSO: ScriptableObject
     public int damage = 10; // Daño que hace el enemigo
     public float attackCooldown = 1f; // Tiempo entre ataques
     public float speed;
+    public float acceleration;
 }

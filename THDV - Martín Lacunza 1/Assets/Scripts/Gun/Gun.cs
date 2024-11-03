@@ -14,7 +14,7 @@ public class Gun : MonoBehaviour
 
     void Start()
     {
-        gunData.currentAmmo = gunData.maxAmmo;
+        gunData.currentAmmo = gunData.maxAmmo; // Inicializa currentAmmo
         UpdateAmmoUI(); // Actualiza la UI al inicio
     }
 
@@ -67,7 +67,7 @@ public class Gun : MonoBehaviour
         int ammoNeeded = gunData.maxAmmo - gunData.currentAmmo;
         if (gunData.reserveAmmo >= ammoNeeded)
         {
-            gunData.currentAmmo += ammoNeeded;
+            gunData.currentAmmo += ammoNeeded; // Solo actualiza currentAmmo
             gunData.reserveAmmo -= ammoNeeded;
         }
         else
@@ -123,18 +123,8 @@ public class Gun : MonoBehaviour
     {
         if (gameObject.activeInHierarchy) // Asegúrate de que el arma esté activa
         {
-            // Solo actualizar la reserva si el arma está equipada
+            // Solo actualizar la reserva
             gunData.reserveAmmo += amount;
-
-            // Actualiza currentAmmo si el arma está equipada y no está llena
-            if (gunData.currentAmmo < gunData.maxAmmo)
-            {
-                int ammoNeeded = gunData.maxAmmo - gunData.currentAmmo;
-                int ammoToAdd = Mathf.Min(ammoNeeded, amount);
-
-                gunData.currentAmmo += ammoToAdd;
-                gunData.reserveAmmo -= ammoToAdd; // Restar la munición añadida de la reserva
-            }
 
             UpdateAmmoUI(); // Actualiza la UI para mostrar la nueva munición
             Debug.Log("Munición de reserva aumentada. Reserva actual: " + gunData.reserveAmmo);

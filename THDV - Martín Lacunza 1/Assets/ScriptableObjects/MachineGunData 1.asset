@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAmmo: 25
   currentAmmo: 25
-  reserveAmmo: 77
+  reserveAmmo: 60
   reloadTime: 1
   damage: 5
   range: 80

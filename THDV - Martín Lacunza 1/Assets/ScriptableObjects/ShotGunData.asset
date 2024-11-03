@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392e9cf508a997e458165f24398f6e71, type: 3}
   m_Name: ShotGunData
   m_EditorClassIdentifier: 
-  maxAmmo: 50
-  currentAmmo: 48
-  reserveAmmo: 77
-  reloadTime: 5
-  damage: 40
+  maxAmmo: 7
+  currentAmmo: 7
+  reserveAmmo: 35
+  reloadTime: 3
+  damage: 50
   range: 30
   fireRate: 1

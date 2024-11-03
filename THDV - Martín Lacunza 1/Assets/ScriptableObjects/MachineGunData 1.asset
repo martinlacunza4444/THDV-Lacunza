@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392e9cf508a997e458165f24398f6e71, type: 3}
   m_Name: MachineGunData 1
   m_EditorClassIdentifier: 
-  maxAmmo: 12
-  currentAmmo: 12
+  maxAmmo: 25
+  currentAmmo: 25
   reserveAmmo: 77
   reloadTime: 1
-  damage: 10
+  damage: 5
   range: 80
-  fireRate: 3
+  fireRate: 10

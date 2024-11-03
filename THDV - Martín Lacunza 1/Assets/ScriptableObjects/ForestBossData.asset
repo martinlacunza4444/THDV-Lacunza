@@ -15,5 +15,5 @@ MonoBehaviour:
   StartHealth: 500
   damage: 20
   attackCooldown: 1
-  speed: 30
+  speed: 20
   acceleration: 20

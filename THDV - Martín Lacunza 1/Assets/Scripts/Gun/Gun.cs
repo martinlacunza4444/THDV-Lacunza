@@ -1,4 +1,4 @@
-using System.Collections; 
+using System.Collections;
 using UnityEngine;
 using TMPro;
 
@@ -31,17 +31,18 @@ public class Gun : MonoBehaviour
             return;
         }
 
-        // Permitir recargar si hay balas en la reserva
-        if (Input.GetKeyDown(KeyCode.R) && gunData.reserveAmmo > 0)
+        // Permitir recargar si hay balas en la reserva y currentAmmo no está en su máximo
+        if (Input.GetKeyDown(KeyCode.R) && gunData.reserveAmmo > 0 && gunData.currentAmmo < gunData.maxAmmo)
         {
             StartCoroutine(Reload());
             return; // Salimos aquí para evitar disparar
         }
 
-        // Si no hay munición, no se puede disparar
+        // Si no hay munición, disparar debería recargar automáticamente
         if (gunData.currentAmmo <= 0)
         {
-            Debug.Log("Sin munición. No puedes disparar.");
+            Debug.Log("Sin munición. Recargando automáticamente.");
+            StartCoroutine(Reload());
             return; // Sale del método Update si no hay munición
         }
 
@@ -121,11 +122,11 @@ public class Gun : MonoBehaviour
     public void AddAmmo(int amount)
     {
         if (gameObject.activeInHierarchy) // Asegúrate de que el arma esté activa
-            {
+        {
             // Solo actualizar la reserva si el arma está equipada
             gunData.reserveAmmo += amount;
 
-            // Actualiza currentAmmo si el arma está equipada
+            // Actualiza currentAmmo si el arma está equipada y no está llena
             if (gunData.currentAmmo < gunData.maxAmmo)
             {
                 int ammoNeeded = gunData.maxAmmo - gunData.currentAmmo;
@@ -137,6 +138,6 @@ public class Gun : MonoBehaviour
 
             UpdateAmmoUI(); // Actualiza la UI para mostrar la nueva munición
             Debug.Log("Munición de reserva aumentada. Reserva actual: " + gunData.reserveAmmo);
-         }
+        }
     }
 }

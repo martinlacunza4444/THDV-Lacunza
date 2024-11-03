@@ -25,11 +25,16 @@ public class PauseMenu : MonoBehaviour
 
             if (IsInPause)
             {
+                // Desactivar los componentes del jugador
                 fpsLook.enabled = false;
                 playerJump.enabled = false;
                 playerCrouch.enabled = false;
                 playerZoom.enabled = false;
-                playerAudio.enabled = false;
+                // Desactivar el objeto completo que contiene el audio
+                if (playerAudio != null)
+                {
+                    playerAudio.gameObject.SetActive(false);
+                }
                 Time.timeScale = 0;
 
                 // Desactivar el GameObject
@@ -40,11 +45,16 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
+                // Reactivar los componentes del jugador
                 fpsLook.enabled = true;
                 playerJump.enabled = true;
                 playerCrouch.enabled = true;
-                playerAudio.enabled = true;
                 playerZoom.enabled = true;
+                // Reactivar el objeto completo que contiene el audio
+                if (playerAudio != null)
+                {
+                    playerAudio.gameObject.SetActive(true);
+                }
                 Time.timeScale = 1;
 
                 // Activar el GameObject

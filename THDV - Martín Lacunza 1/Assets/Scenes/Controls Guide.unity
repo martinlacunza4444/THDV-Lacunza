@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 112788399}
   - component: {fileID: 112788398}
   m_Layer: 5
-  m_Name: Button (8)
+  m_Name: 'SHIFT Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,9 +158,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372.00003, y: -114.99993}
+  m_AnchoredPosition: {x: -327.0358, y: -220.79813}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112788398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 224570380}
   - component: {fileID: 224570379}
   m_Layer: 5
-  m_Name: Text (TMP) (9)
+  m_Name: 'DROP Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 265119712}
   - component: {fileID: 265119711}
   m_Layer: 5
-  m_Name: Button (5)
+  m_Name: 'Q Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,9 +756,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.99997, y: -114.999954}
+  m_AnchoredPosition: {x: 207.96423, y: -220.79817}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265119711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 326789427}
   - component: {fileID: 326789426}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: R Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -966,9 +966,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.99997, y: 148.00008}
+  m_AnchoredPosition: {x: 207.96423, y: 42.201897}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326789426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 396496869}
   - component: {fileID: 396496868}
   m_Layer: 5
-  m_Name: Button (7)
+  m_Name: 'LMB Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,9 +1176,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.99997, y: 275.0001}
+  m_AnchoredPosition: {x: 207.96423, y: 169.2019}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396496868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 401753881}
   - component: {fileID: 401753880}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: 'CTRL Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1252,9 +1252,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372.00003, y: 18.000023}
+  m_AnchoredPosition: {x: -327.0358, y: -87.79815}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401753880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1573,7 @@ GameObject:
   - component: {fileID: 631048912}
   - component: {fileID: 631048911}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: 'CROUCH Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CRAWL
+  m_text: CROUCH
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1707,7 +1707,7 @@ GameObject:
   - component: {fileID: 709444572}
   - component: {fileID: 709444571}
   m_Layer: 5
-  m_Name: Text (TMP) (10)
+  m_Name: 'SPECIAL VISION Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1977,7 +1977,7 @@ GameObject:
   - component: {fileID: 872945300}
   - component: {fileID: 872945299}
   m_Layer: 5
-  m_Name: Text (TMP) (8)
+  m_Name: 'INTERACT Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2111,7 +2111,7 @@ GameObject:
   - component: {fileID: 884218527}
   - component: {fileID: 884218526}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: 'SHOOT Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2267,11 +2267,11 @@ RectTransform:
   - {fileID: 1092536267}
   m_Father: {fileID: 1721785455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -833.6722, y: 426.785}
-  m_SizeDelta: {x: 186.354, y: 114.536}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -876.8492, y: 434.053}
+  m_SizeDelta: {x: 186.354, y: 114.53601}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &975009725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2649,7 +2649,7 @@ GameObject:
   - component: {fileID: 1114538311}
   - component: {fileID: 1114538310}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: 'E Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2672,9 +2672,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163.00003, y: 17.999962}
+  m_AnchoredPosition: {x: 207.96423, y: -87.79821}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114538310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 1200947180}
   - component: {fileID: 1200947179}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: 'PAUSE Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2859,7 +2859,7 @@ GameObject:
   - component: {fileID: 1211059289}
   - component: {fileID: 1211059288}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: 'SPACE Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2882,9 +2882,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372.00003, y: 148.00005}
+  m_AnchoredPosition: {x: -327.0358, y: 42.20185}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211059288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3079,10 +3079,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1387065968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00010279606, y: 23}
-  m_SizeDelta: {x: 1920, y: 1126}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403710790
 MonoBehaviour:
@@ -3134,7 +3134,7 @@ GameObject:
   - component: {fileID: 1409539153}
   - component: {fileID: 1409539152}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: 'RELOAD Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3268,7 +3268,7 @@ GameObject:
   - component: {fileID: 1471875290}
   - component: {fileID: 1471875289}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: 'JUMP Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3402,7 +3402,7 @@ GameObject:
   - component: {fileID: 1483132272}
   - component: {fileID: 1483132271}
   m_Layer: 5
-  m_Name: Button (9)
+  m_Name: 'ESC Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3425,9 +3425,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372.00003, y: -250.99992}
+  m_AnchoredPosition: {x: -327.0358, y: -356.79816}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483132271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3729,7 +3729,7 @@ GameObject:
   - component: {fileID: 1750326763}
   - component: {fileID: 1750326762}
   m_Layer: 5
-  m_Name: Button
+  m_Name: WASD Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3752,9 +3752,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372, y: 275}
+  m_AnchoredPosition: {x: -327.03574, y: 169.20181}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750326762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3939,7 +3939,7 @@ GameObject:
   - component: {fileID: 1936307371}
   - component: {fileID: 1936307370}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TITLE Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3961,7 +3961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000038147, y: 363}
+  m_AnchoredPosition: {x: -0.00005767102, y: 363.00003}
   m_SizeDelta: {x: 617.323, y: 200.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936307370
@@ -4073,7 +4073,7 @@ GameObject:
   - component: {fileID: 1998848813}
   - component: {fileID: 1998848812}
   m_Layer: 5
-  m_Name: Button (6)
+  m_Name: 'F Button '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4096,9 +4096,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 162.99997, y: -250.99992}
+  m_AnchoredPosition: {x: 207.96423, y: -356.79816}
   m_SizeDelta: {x: 167.471, y: 84.606}
-  m_Pivot: {x: 0.23151031, y: 1.7504809}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1998848812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4149,7 +4149,7 @@ GameObject:
   - component: {fileID: 2000882445}
   - component: {fileID: 2000882444}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MOVEMENT Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4419,7 +4419,7 @@ GameObject:
   - component: {fileID: 2015013388}
   - component: {fileID: 2015013387}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: 'RUN Text (TMP) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
